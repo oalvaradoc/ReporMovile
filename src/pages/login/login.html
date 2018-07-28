@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input name="email" type="email" [(ngModel)]="usuario.email">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input name="password1" type="password" [(ngModel)]="usuario.password1">
+    </ion-input>
+  </ion-item>
+  <button ion-button (click)="iniciarSesion()">Iniciar sesion</button>
+  
+  <p>O Inicia sesion con los proveedores </p>
+  <button ion-button (click)="iniciarSesionRedes('facebook')">
+    <ion-icon name="logo-facebook"> Facebook</ion-icon>
+  </button>
+  <button ion-button (click)="iniciarSesionRedes('google')">
+    <ion-icon name="logo-google"> Google</ion-icon>
+  </button>
+  <button ion-button (click)="iniciarSesionRedes('twitter')">
+    <ion-icon name="logo-twitter"> Twitter</ion-icon>
+  </button>
+  
+  
+  <button ion-button [navPush]="paginaRegistro"> Registrarse</button>
+</ion-content>

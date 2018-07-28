@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <p>{{email}}</p>
+    <button ion-button [navPush]="loginPage"> Iniciar Sesion</button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="obtenerFoto()"></button>
+ <button ion-button (click)="iniciarSesionFacebook()">Facebook</button>
+</ion-content>
